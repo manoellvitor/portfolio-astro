@@ -6,3 +6,8 @@
   font-family: "OCRAbyBT";
   src: url("/fonts/OCRAbyBT.otf");
 }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  @apply text-zinc-50;
+}
