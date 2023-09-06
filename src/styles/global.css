@@ -7,6 +7,11 @@
   src: url("/fonts/OCRAbyBT.otf");
 }
 
+@font-face {
+  font-family: "Courier";
+  src: url("/fonts/Courier.ttf");
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   @apply text-zinc-50;

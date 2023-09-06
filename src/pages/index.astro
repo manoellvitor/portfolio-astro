@@ -1,26 +1,41 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import ManoelLopesAvatar from "../images/manoel_lopes.jpg";
 ---
 
 <MainLayout title="Home">
-  <div>
-    <h1 class="font-ocra text-2xl mt-10 text-green-700 font-semibold">
-      {"<About Manoel />"}
-    </h1>
+  <div class="flex flex-row mt-10 gap-8">
+    <div>
+      <h1 class="font-ocra text-2xl text-green-700 font-semibold">
+        <span class="text-white">{"<"}</span>About Manoel<span
+          class="text-white">{" />"}</span
+        >
+      </h1>
 
-    <p
-      class="font-mono max-w-[700px] ml-10 text-justify leading-7 mt-2 indent-8"
+      <p
+        class="font-courier max-w-[700px] ml-10 text-justify leading-7 mt-2 indent-8"
+      >
+        I'm an experienced software engineer 💻 with proficiency in backend
+        technologies like Node.js and Python, as well as frontend tools like
+        React.js, Astro, and Next.js. I excel in CSS3 styling and utilize modern
+        frameworks like Tailwind CSS. My database expertise includes PostgreSQL,
+        MongoDB, and MariaDB, with proficiency in ORMs like Prisma and
+        SQLAlchemy. I've worked with frameworks like FastAPI and Express. My
+        Agile Methodologies background complements my strong QA skills, covering
+        manual and automated testing with Selenium, Cypress, and Playwright. On
+        a personal note, I'm an inline hockey enthusiast 🏒 and a devoted fan of
+        Harry Potter ⚡ and Lord of the Rings 🌄.
+      </p>
+    </div>
+    <div
+      class="flex flex-col items-center justify-center rounded-full h-80 w-80 shadow-xl shadow-cyan-500/50"
     >
-      I'm an experienced software engineer 💻 with proficiency in backend
-      technologies like Node.js and Python, as well as frontend tools like
-      React.js, Astro, and Next.js. I excel in CSS3 styling and utilize modern
-      frameworks like Tailwind CSS. My database expertise includes PostgreSQL,
-      MongoDB, and MariaDB, with proficiency in ORMs like Prisma and SQLAlchemy.
-      I've worked with frameworks like FastAPI and Express. My Agile
-      Methodologies background complements my strong QA skills, covering manual
-      and automated testing with Selenium, Cypress, and Playwright. On a
-      personal note, I'm an inline hockey enthusiast 🏒 and a devoted fan of
-      Harry Potter ⚡ and Lord of the Rings 🌄.
-    </p>
+      <Image
+        src={ManoelLopesAvatar}
+        alt="Manoel Lopes, Preparing his hockey stick for a game!"
+        class={"rounded-full h-80 w-80 ring-4 ring-cyan-500 object-cover"}
+      />
+    </div>
   </div>
 </MainLayout>
