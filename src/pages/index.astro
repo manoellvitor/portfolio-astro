@@ -4,11 +4,22 @@ import { Image } from "astro:assets";
 import ManoelLopesAvatar from "../images/manoel_lopes.jpg";
 import Node from "../images/nodejs.svg";
 import PostgreSQL from "../images/postgresql.svg";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+import { Button } from "@/components/ui/button";
+import { Github, Link, Tv } from "lucide-react";
 ---
 
 <MainLayout title="Manoel Lopes | Developer - QA">
   <!-- About Section will me converted to an component latter on -->
-  <div class="flex flex-row mt-10 justify-between items-center">
+  <section class="flex flex-row mt-10 justify-between items-center">
     <div>
       <h1 class="font-ocra text-2xl text-green-700">
         <span class="text-white">{"<"}</span>About Manoel<span
@@ -40,11 +51,11 @@ import PostgreSQL from "../images/postgresql.svg";
         class={"rounded-full h-80 w-80 ring-4 ring-cyan-500 object-cover"}
       />
     </div>
-  </div>
+  </section>
 
   <!-- Projects Section will me converted to an component latter on -->
 
-  <div class="mt-10">
+  <section class="mt-10">
     <h1 class="font-ocra text-2xl text-yellow-400">
       <span class="text-white">{"<"}</span>Projects<span class="text-white"
         >{" />"}</span
@@ -52,46 +63,48 @@ import PostgreSQL from "../images/postgresql.svg";
     </h1>
 
     <!-- Project components goes here. -->
-
-    <div class="grid grid-cols-3 w-full h-[500px] gap-3 justify-between mt-10">
+    <!-- TODO: Lembrar te tirar esse h-[500px] -->
+    <div class="grid grid-cols-3 w-full gap-3 justify-between mt-10">
       <!-- Each Card -->
-      <div
-        class="border-2 h-96 border-cyan-400 p-4 flex flex-col items-center rounded-md"
+      <Card
+        className="border-2 border-cyan-400 px-4 py-2 flex flex-col items-center rounded-md"
       >
-        <h1 class="text-2xl font-ocra uppercase text-purple-600">
-          Project Title
-        </h1>
-        <p class="text-justify mt-2">
+        <CardHeader className="text-2xl font-ocra uppercase text-purple-600">
+          <CardTitle>Project Title</CardTitle>
+        </CardHeader>
+        <CardDescription className="text-justify font-courier indent-4 text-md">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
-          quisquam, officiis et laboriosam earum magnam cum facilis ducimus
-          voluptates amet iusto reprehenderit commodi ab fugiat nemo pariatur
-          reiciendis voluptatem delectus?
-        </p>
-        <h2 class="text-lg font-ocra uppercase text-orange-500">Tech Stack</h2>
-        <div class="flex flex-row mt-2 gap-2">
-          <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
-          <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
-          <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
-          <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
-          <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
-          <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
-        </div>
+          quisquam, officiis et laboriosam earum magnam cum facilis ducimus.
+        </CardDescription>
+        <CardContent className="flex flex-col items-center mt-2">
+          <h2 class="text-sm font-ocra uppercase text-orange-500">
+            Tech Stack
+          </h2>
+          <div class="flex flex-row mt-4 gap-4">
+            <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
+            <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
+            <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
+            <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
+            <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
+            <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
+          </div>
+        </CardContent>
 
-        <div class="flex flex-row gap-4 mt-5">
+        <CardFooter className="flex flex-row gap-4 mt-5">
           <a
             href="#"
             target="_blank"
-            class="text-zinc-50 uppercase rounded-md border-2 border-lime-500 p-2 hover:bg-lime-500 transition-colors duration-300 font-ocra"
-            >Live Demo</a
+            class="text-zinc-50 uppercase rounded-md border-2 border-lime-600 p-2 hover:bg-lime-700 transition-colors duration-300 font-ocra flex gap-2"
+            ><Tv />Live Demo</a
           >
           <a
             href="#"
             target="_blank"
-            class="text-zinc-50 uppercase rounded-md border-2 border-lime-500 p-2 hover:bg-lime-500 transition-colors duration-300 font-ocra"
-            >Git Repository</a
+            class="text-zinc-50 uppercase rounded-md border-2 border-lime-600 p-2 hover:bg-lime-700 transition-colors duration-300 font-ocra flex gap-2"
+            ><Github />Git Repository</a
           >
-        </div>
-      </div>
+        </CardFooter>
+      </Card>
     </div>
-  </div>
+  </section>
 </MainLayout>
