@@ -2,11 +2,13 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import ManoelLopesAvatar from "../images/manoel_lopes.jpg";
+import Node from "../images/nodejs.svg";
+import PostgreSQL from "../images/postgresql.svg";
 ---
 
 <MainLayout title="Home">
   <!-- About Section will me converted to an component latter on -->
-  <div class="flex flex-row mt-10 gap-8">
+  <div class="flex flex-row mt-10 justify-between items-center">
     <div>
       <h1 class="font-ocra text-2xl text-green-700">
         <span class="text-white">{"<"}</span>About Manoel<span
@@ -15,18 +17,18 @@ import ManoelLopesAvatar from "../images/manoel_lopes.jpg";
       </h1>
 
       <p
-        class="font-courier max-w-[700px] ml-10 text-justify leading-7 mt-2 indent-8"
+        class="font-courier max-w-[700px] ml-14 text-justify leading-7 mt-10 indent-8 tracking-wide"
       >
-        I'm a software developer 💻 with proficiency in backend technologies
-        like Node.js and Python, as well as frontend tools like React.js, Astro,
-        and Next.js. I excel in CSS3 styling and utilize modern frameworks like
-        Tailwind CSS. My database expertise includes PostgreSQL, MongoDB, and
-        MariaDB, with proficiency in ORMs like Prisma and SQLAlchemy. I've
-        worked with frameworks like FastAPI and Express. My Agile Methodologies
-        background complements my strong QA skills, covering manual and
-        automated testing with Selenium, Cypress, and Playwright. On a personal
-        note, I'm an inline hockey enthusiast 🏒 and a devoted fan of Harry
-        Potter ⚡ and Lord of the Rings 🌄.
+        I'm a Full Stack Software Engineer, with proficiency in backend
+        technologies like Node.js and Python, as well as frontend tools like
+        React.js, Astro, and Next.js. I excel in CSS3 styling and utilize modern
+        frameworks like Tailwind CSS. My database expertise includes PostgreSQL,
+        MongoDB, and MariaDB, with proficiency in ORMs like Prisma and
+        SQLAlchemy. I've worked with frameworks like FastAPI and Express. My
+        Agile Methodologies background complements my strong QA skills, covering
+        manual and automated testing with Selenium, Cypress, and Playwright. On
+        a personal note, I'm an Inline Hockey enthusiast 🏒 and a devoted fan of
+        Harry Potter ⚡ and Lord of the Rings 🌄.
       </p>
     </div>
     <div
@@ -48,5 +50,48 @@ import ManoelLopesAvatar from "../images/manoel_lopes.jpg";
         >{" />"}</span
       >
     </h1>
+
+    <!-- Project components goes here. -->
+
+    <div class="grid grid-cols-3 w-full h-[500px] gap-3 justify-between mt-10">
+      <!-- Each Card -->
+      <div
+        class="border-2 h-96 border-cyan-400 p-4 flex flex-col items-center rounded-md"
+      >
+        <h1 class="text-2xl font-ocra uppercase text-purple-600">
+          Project Title
+        </h1>
+        <p class="text-justify mt-2">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
+          quisquam, officiis et laboriosam earum magnam cum facilis ducimus
+          voluptates amet iusto reprehenderit commodi ab fugiat nemo pariatur
+          reiciendis voluptatem delectus?
+        </p>
+        <h2 class="text-lg font-ocra uppercase text-orange-500">Tech Stack</h2>
+        <div class="flex flex-row mt-2 gap-2">
+          <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
+          <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
+          <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
+          <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
+          <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
+          <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
+        </div>
+
+        <div class="flex flex-row gap-4 mt-5">
+          <a
+            href="#"
+            target="_blank"
+            class="text-zinc-50 uppercase rounded-md border-2 border-lime-500 p-2 hover:bg-lime-500 transition-colors duration-300 font-ocra"
+            >Live Demo</a
+          >
+          <a
+            href="#"
+            target="_blank"
+            class="text-zinc-50 uppercase rounded-md border-2 border-lime-500 p-2 hover:bg-lime-500 transition-colors duration-300 font-ocra"
+            >Git Repository</a
+          >
+        </div>
+      </div>
+    </div>
   </div>
 </MainLayout>
