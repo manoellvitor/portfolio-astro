@@ -1,9 +1,9 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
 import { Image } from "astro:assets";
-import ManoelLopesAvatar from "../images/manoel_lopes.jpg";
-import Node from "../images/nodejs.svg";
-import PostgreSQL from "../images/postgresql.svg";
+import ManoelLopesAvatar from "@/images/manoel_lopes.jpg";
+import Node from "@/images/nodejs.svg";
+import PostgreSQL from "@/images/postgresql.svg";
 import {
   Card,
   CardContent,
@@ -13,8 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { Button } from "@/components/ui/button";
-import { Github, Link, Tv } from "lucide-react";
+import { Github, Tv } from "lucide-react";
 ---
 
 <MainLayout title="Manoel Lopes | Developer - QA">
@@ -22,13 +21,13 @@ import { Github, Link, Tv } from "lucide-react";
   <section class="flex flex-row mt-10 justify-between items-center">
     <div>
       <h1 class="font-ocra text-2xl text-green-700">
-        <span class="text-white">{"<"}</span>About Manoel<span
-          class="text-white">{" />"}</span
+        <span class="text-zinc-50">{"<"}</span>About Manoel<span
+          class="text-zinc-50">{" />"}</span
         >
       </h1>
 
       <p
-        class="font-courier max-w-[700px] ml-14 text-justify leading-7 mt-10 indent-8 tracking-wide"
+        class="font-courier max-w-[700px] ml-14 text-justify leading-7 mt-10 indent-8 tracking-wide text-zinc-50"
       >
         I'm a Full Stack Software Engineer, with proficiency in backend
         technologies like Node.js and Python, as well as frontend tools like
@@ -57,14 +56,13 @@ import { Github, Link, Tv } from "lucide-react";
 
   <section class="mt-10">
     <h1 class="font-ocra text-2xl text-yellow-400">
-      <span class="text-white">{"<"}</span>Projects<span class="text-white"
+      <span class="text-zinc-50">{"<"}</span>Projects<span class="text-zinc-50"
         >{" />"}</span
       >
     </h1>
 
     <!-- Project components goes here. -->
-    <!-- TODO: Lembrar te tirar esse h-[500px] -->
-    <div class="grid grid-cols-3 w-full gap-3 justify-between mt-10">
+    <div class="grid grid-cols-3 gap-3 mt-10">
       <!-- Each Card -->
       <Card
         className="border-2 border-cyan-400 px-4 py-2 flex flex-col items-center rounded-md"
@@ -72,7 +70,9 @@ import { Github, Link, Tv } from "lucide-react";
         <CardHeader className="text-2xl font-ocra uppercase text-purple-600">
           <CardTitle>Project Title</CardTitle>
         </CardHeader>
-        <CardDescription className="text-justify font-courier indent-4 text-md">
+        <CardDescription
+          className="text-justify font-courier indent-4 text-md "
+        >
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
           quisquam, officiis et laboriosam earum magnam cum facilis ducimus.
         </CardDescription>
@@ -90,18 +90,20 @@ import { Github, Link, Tv } from "lucide-react";
           </div>
         </CardContent>
 
-        <CardFooter className="flex flex-row gap-4 mt-5">
+        <CardFooter
+          className="flex flex-row gap-4 overflow-hidden whitespace-nowrap mt-5"
+        >
           <a
             href="#"
             target="_blank"
-            class="text-zinc-50 uppercase rounded-md border-2 border-lime-600 p-2 hover:bg-lime-700 transition-colors duration-300 font-ocra flex gap-2"
-            ><Tv />Live Demo</a
+            class="text-zinc-50 uppercase rounded-md border-2 text-sm border-lime-600 p-2 w-full justify-center items-center hover:bg-lime-700 transition-colors duration-300 font-ocra flex gap-2"
+            >Live Demo</a
           >
           <a
             href="#"
             target="_blank"
-            class="text-zinc-50 uppercase rounded-md border-2 border-lime-600 p-2 hover:bg-lime-700 transition-colors duration-300 font-ocra flex gap-2"
-            ><Github />Git Repository</a
+            class="text-zinc-50 uppercase rounded-md border-2 text-sm border-lime-600 p-2 w-full justify-center items-center hover:bg-lime-700 transition-colors duration-300 font-ocra flex gap-2"
+            >Git Repository</a
           >
         </CardFooter>
       </Card>
