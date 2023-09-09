@@ -89,3 +89,12 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* .tippy-box[data-theme="default"] {
+  background-color: var(--vscode-menu-background);
+  color: var(--vscode-badge-foreground);
+  border: 1px solid var(--vscode-editorWidget-border);
+  border-radius: 0.15rem;
+  padding: 0.5rem;
+  word-wrap: break-word;
+} */

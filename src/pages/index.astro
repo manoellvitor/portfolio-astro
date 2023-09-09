@@ -2,8 +2,6 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import ManoelLopesAvatar from "@/images/manoel_lopes.jpg";
-import Node from "@/images/nodejs.svg";
-import PostgreSQL from "@/images/postgresql.svg";
 import {
   Card,
   CardContent,
@@ -13,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { Github, Tv } from "lucide-react";
+import { BiLogoNodejs, BiLogoPostgresql, BiLogoReact } from "react-icons/bi";
 ---
 
 <MainLayout title="Manoel Lopes | Developer - QA">
@@ -81,12 +79,19 @@ import { Github, Tv } from "lucide-react";
             Tech Stack
           </h2>
           <div class="flex flex-row mt-4 gap-4">
-            <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
-            <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
-            <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
-            <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
-            <Image src={Node} alt="Node.js" class={"w-10 h-10"} />
-            <Image src={PostgreSQL} alt="Node.js" class={"w-10 h-10"} />
+            <a title="Node.js" data-tooltip-placement="bottom">
+              <BiLogoNodejs size="48px" className="text-zinc-50" />
+            </a>
+            <BiLogoReact
+              size="48px"
+              className="text-zinc-50"
+              title="React.js"
+            />
+            <BiLogoPostgresql
+              size="48px"
+              className="text-zinc-50"
+              title="PostgreSQL"
+            />
           </div>
         </CardContent>
 
@@ -96,13 +101,13 @@ import { Github, Tv } from "lucide-react";
           <a
             href="#"
             target="_blank"
-            class="text-zinc-50 uppercase rounded-md border-2 text-sm border-lime-600 p-2 w-full justify-center items-center hover:bg-lime-700 transition-colors duration-300 font-ocra flex gap-2"
+            class="text-zinc-50 uppercase rounded-md border-2 text-sm border-green-700 p-2 w-full justify-center items-center hover:bg-green-700 transition-colors duration-300 font-ocra flex gap-2"
             >Live Demo</a
           >
           <a
             href="#"
             target="_blank"
-            class="text-zinc-50 uppercase rounded-md border-2 text-sm border-lime-600 p-2 w-full justify-center items-center hover:bg-lime-700 transition-colors duration-300 font-ocra flex gap-2"
+            class="text-zinc-50 uppercase rounded-md border-2 text-sm border-green-700 p-2 w-full justify-center items-center hover:bg-green-700 transition-colors duration-300 font-ocra flex gap-2"
             >Git Repository</a
           >
         </CardFooter>
