@@ -6,19 +6,19 @@ const projects = [
       stack: [
         {
           name: "React",
-          icon: "BiLogoReact"
+          icon: "mdi:react"
         },
         {
           name: "Tailwind CSS",
-          icon: "BiLogoTailwindCss"
+          icon: "mdi:tailwind"
         },
         {
           name: "TypeScript",
-          icon: "BiLogoTypescript"
+          icon: "mdi:language-typescript"
         },
         {
           name: "Vite",
-          icon: "TbBrandVite"
+          icon: "simple-icons:vite"
         }
       ],
       urls: [
@@ -39,23 +39,23 @@ const projects = [
         stack: [
           {
             name: "Node JS",
-            icon: "BiLogoNodejs"
+            icon: "mdi:nodejs"
           },
           {
             name: "HTML 5",
-            icon: "BiLogoHtml5"
+            icon: "mdi:language-html5"
           },
           {
             name: "CSS 3",
-            icon: "BiLogoCss3"
+            icon: "mdi:language-css3"
           },
           {
             name: "Bootstrap",
-            icon: "BiLogoBootstrap"
+            icon: "mdi:bootstrap"
           },
           {
             name: "Postgre SQL",
-            icon: "BiLogoPostgresql"
+            icon: "cib:postgresql"
           },          
         ],
         urls: [
@@ -75,25 +75,25 @@ const projects = [
         stack: [
           {
             name: "Next",
-            icon: "TbBrandNextjs"
+            icon: "teenyicons:nextjs-outline"
           },{
             name: "React",
-            icon: "BiLogoReact"
+            icon: "mdi:react"
           },
           {
             name: "Tailwind CSS",
-            icon: "BiLogoTailwindCss"
+            icon: "mdi:tailwind"
           },
           {
             name: "TypeScript",
-            icon: "BiLogoTypescript"
+            icon: "mdi:language-typescript"
           },
           {
             name: "Postgre SQL",
-            icon: "BiLogoPostgresql"
+            icon: "cib:postgresql"
           },{
             name: "Prisma",
-            icon: "TbBrandPrisma"
+            icon: "simple-icons:prisma"
           },         
         ],
         urls: [

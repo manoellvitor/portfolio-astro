@@ -6,25 +6,25 @@ const futureProject = [
       stack: [
         {
           name: "Next",
-          icon: "TbBrandNextjs"
+          icon: "teenyicons:nextjs-outline"
         },{
           name: "React",
-          icon: "BiLogoReact"
+          icon: "mdi:react"
         },
         {
           name: "Tailwind CSS",
-          icon: "BiLogoTailwindCss"
+          icon: "mdi:tailwind"
         },
         {
           name: "TypeScript",
-          icon: "BiLogoTypescript"
+          icon: "mdi:language-typescript"
         },
         {
           name: "Postgre SQL",
-          icon: "BiLogoPostgresql"
+          icon: "cib:postgresql"
         },{
           name: "Prisma",
-          icon: "TbBrandPrisma"
+          icon: "simple-icons:prisma"
         },         
       ],
       urls: [
