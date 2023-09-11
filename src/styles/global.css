@@ -90,11 +90,21 @@ body {
   }
 }
 
-/* .tippy-box[data-theme="default"] {
-  background-color: var(--vscode-menu-background);
-  color: var(--vscode-badge-foreground);
-  border: 1px solid var(--vscode-editorWidget-border);
-  border-radius: 0.15rem;
-  padding: 0.5rem;
-  word-wrap: break-word;
-} */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-zinc-500;
+  border-radius: 14px;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-zinc-900;
+}
