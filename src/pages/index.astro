@@ -1,8 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
+import About from "@/components/About.astro";
 import Footer from "@/components/Footer.astro";
-import { Image } from "astro:assets";
-import ManoelLopesAvatar from "@/images/manoel_lopes.jpg";
 
 import {
   Card,
@@ -13,7 +12,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import {
+import biIcons from "react-icons/bi";
+
+const {
   BiLogoTailwindCss,
   BiLogoTypescript,
   BiLogoReact,
@@ -22,9 +23,11 @@ import {
   BiLogoHtml5,
   BiLogoCss3,
   BiLogoBootstrap,
-} from "react-icons/bi";
+} = biIcons;
 
-import { TbBrandVite, TbBrandNextjs, TbBrandPrisma } from "react-icons/tb";
+import tbIcons from "react-icons/tb";
+
+const { TbBrandVite, TbBrandNextjs, TbBrandPrisma } = tbIcons;
 
 import { type IconType } from "react-icons";
 
@@ -53,41 +56,8 @@ import futureProject from "@/projects_data/FutureProject";
 ---
 
 <MainLayout title="Manoel Lopes | Developer - QA">
-  <!-- About Section will me converted to an component latter on -->
-  <section class="flex flex-row mt-10 justify-between items-center">
-    <div>
-      <h1 class="font-ocra text-2xl text-green-700">
-        <span class="text-zinc-50">{"<"}</span>About Manoel<span
-          class="text-zinc-50">{" />"}</span
-        >
-      </h1>
-
-      <p
-        class="font-courier max-w-[700px] ml-14 text-justify leading-7 mt-10 indent-10 tracking-wide text-zinc-300"
-      >
-        I'm a Full Stack Software Engineer, with proficiency in backend
-        technologies like Node.js and Python, as well as frontend tools like
-        React.js, Astro, and Next.js. I excel in CSS3 styling and utilize modern
-        frameworks like Tailwind CSS. My database expertise includes PostgreSQL,
-        MongoDB, and MariaDB, with proficiency in ORMs like Prisma and
-        SQLAlchemy. I've worked with frameworks like FastAPI and Express. My
-        Agile Methodologies background complements my strong QA skills, covering
-        manual and automated testing with Selenium, Cypress, and Playwright. On
-        a personal note, I'm an Inline Hockey enthusiast 🏒 and a devoted fan of
-        Harry Potter ⚡ and Lord of the Rings 🌄.
-      </p>
-    </div>
-    <div
-      class="flex flex-col items-center justify-center rounded-full h-80 w-80 shadow-xl shadow-cyan-500/50"
-    >
-      <Image
-        src={ManoelLopesAvatar}
-        alt="Manoel Lopes, Preparing his hockey stick for a game!"
-        class={"rounded-full h-80 w-80 ring-4 ring-cyan-500 object-cover"}
-      />
-    </div>
-  </section>
-
+  <!-- Hero About Section -->
+  <About />
   <!-- Projects Section will me converted to an component latter on -->
 
   <section class="mt-10">
@@ -122,7 +92,7 @@ import futureProject from "@/projects_data/FutureProject";
                       <a title={tech.name} data-tooltip-placement="bottom">
                         <IconComponent
                           size="48px"
-                          className="text-zinc-500 hover:text-zinc-300 transition-colors duration-300"
+                          className="text-zinc-500 hover:text-zinc-300 transition-colors duration-500"
                         />
                       </a>
                     );
@@ -180,7 +150,7 @@ import futureProject from "@/projects_data/FutureProject";
                       <a title={tech.name} data-tooltip-placement="bottom">
                         <IconComponent
                           size="48px"
-                          className="text-zinc-500 hover:text-zinc-300 transition-colors duration-300"
+                          className="text-zinc-500 hover:text-zinc-300 transition-colors duration-500"
                         />
                       </a>
                     );
@@ -206,10 +176,4 @@ import futureProject from "@/projects_data/FutureProject";
       }
     </div>
   </section>
-
-  <!-- Footer goes here -->
-  <div class="mx-auto flex mt-10 items-center justify-center">
-    <h1 class="font-ocra text-4xl text-red-800">Game Over</h1>
-  </div>
-  <Footer />
 </MainLayout>

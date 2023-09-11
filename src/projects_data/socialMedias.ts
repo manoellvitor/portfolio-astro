@@ -1,6 +1,6 @@
 const socialMedias = [
     {
-        name: "Github",
+        name: "GitHub",
         url: "https://github.com/manoellvitor",
         icon: "BiLogoGithub",
         color: "red"

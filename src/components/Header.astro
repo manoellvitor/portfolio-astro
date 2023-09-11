@@ -17,7 +17,6 @@ const icons: Icons = {
   BiLogoGithub,
   BiLogoLinkedinSquare,
   BiSolidFilePdf,
-  // Add more icons as needed
 };
 ---
 
@@ -39,19 +38,17 @@ const icons: Icons = {
             socialMedias.map((media) => {
               const IconComponent = icons[media.icon];
               return (
-                <li
-                  class={`text-zinc-500 hover:text-${media.color}-500 transition-colors duration-300`}
-                >
-                  {console.log(
-                    `text-zinc-500 hover:text-${media.color}-500 transition-colors duration-300`
-                  )}
+                <li>
                   <a
                     href={media.url}
                     target="_blank"
                     title={media.name}
                     data-tooltip-placement="bottom"
                   >
-                    <IconComponent size="32px" />
+                    <IconComponent
+                      size="32px"
+                      className={`text-zinc-500 hover:text-${media.color}-500 transition-colors duration-500`}
+                    />
                   </a>
                 </li>
               );

@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import ManoelLopesAvatar from "@/images/manoel_lopes.jpg";
+---
+
+<section class="flex flex-row mt-10 justify-between items-center">
+  <div>
+    <h1 class="font-ocra text-2xl text-green-700">
+      <span class="text-zinc-50">{"<"}</span>About Manoel<span
+        class="text-zinc-50">{" />"}</span
+      >
+    </h1>
+
+    <p
+      class="font-courier max-w-[700px] ml-14 text-justify leading-7 mt-10 indent-10 tracking-wide text-zinc-300"
+    >
+      I'm a Full Stack Software Engineer, with proficiency in backend
+      technologies like Node.js and Python, as well as frontend tools like
+      React.js, Astro, and Next.js. I excel in CSS3 styling and utilize modern
+      frameworks like Tailwind CSS. My database expertise includes PostgreSQL,
+      MongoDB, and MariaDB, with proficiency in ORMs like Prisma and SQLAlchemy.
+      I've worked with frameworks like FastAPI and Express. My Agile
+      Methodologies background complements my strong QA skills, covering manual
+      and automated testing with Selenium, Cypress, and Playwright. On a
+      personal note, I'm an Inline Hockey enthusiast 🏒 and a devoted fan of
+      Harry Potter ⚡ and Lord of the Rings 🌄.
+    </p>
+  </div>
+  <div
+    class="flex flex-col items-center justify-center rounded-full h-80 w-80 shadow-xl shadow-cyan-500/50"
+  >
+    <Image
+      src={ManoelLopesAvatar}
+      alt="Manoel Lopes, Preparing his hockey stick for a game!"
+      class={"rounded-full h-80 w-80 ring-4 ring-cyan-500 object-cover"}
+    />
+  </div>
+</section>
