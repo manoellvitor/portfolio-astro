@@ -1,5 +1,24 @@
 ---
-// import Logo from "./Logo";
+import socialMedias from "@/projects_data/socialMedias";
+import {
+  BiLogoGithub,
+  BiLogoLinkedinSquare,
+  BiSolidFilePdf,
+} from "react-icons/bi";
+
+import { type IconType } from "react-icons";
+
+// Define a type for the icons object
+type Icons = {
+  [key: string]: IconType;
+};
+
+const icons: Icons = {
+  BiLogoGithub,
+  BiLogoLinkedinSquare,
+  BiSolidFilePdf,
+  // Add more icons as needed
+};
 ---
 
 <header
@@ -9,23 +28,35 @@
     class="flex flex-row max-w-[1200px] h-28 mx-auto justify-between items-center"
   >
     <div>
-      <!-- <Logo /> -->
       <h1 class="text-4xl font-bold">
         MANOEL LOPES<span class="animate-ping-fast">_</span>
       </h1>
     </div>
-    <nav class="">
+    <nav>
       <div>
         <ul class="flex gap-4 text-lg">
-          <li class="hover:text-red-600 transition-colors duration-300">
-            <a href="/">Home</a>
-          </li>
-          <li class="hover:text-green-600 transition-colors duration-300">
-            <a href="">About</a>
-          </li>
-          <li class="hover:text-blue-600 transition-colors duration-300">
-            <a href="">Contact</a>
-          </li>
+          {
+            socialMedias.map((media) => {
+              const IconComponent = icons[media.icon];
+              return (
+                <li
+                  class={`text-zinc-500 hover:text-${media.color}-500 transition-colors duration-300`}
+                >
+                  {console.log(
+                    `text-zinc-500 hover:text-${media.color}-500 transition-colors duration-300`
+                  )}
+                  <a
+                    href={media.url}
+                    target="_blank"
+                    title={media.name}
+                    data-tooltip-placement="bottom"
+                  >
+                    <IconComponent size="32px" />
+                  </a>
+                </li>
+              );
+            })
+          }
         </ul>
       </div>
     </nav>

@@ -1,7 +1,9 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
+import Footer from "@/components/Footer.astro";
 import { Image } from "astro:assets";
 import ManoelLopesAvatar from "@/images/manoel_lopes.jpg";
+
 import {
   Card,
   CardContent,
@@ -15,7 +17,14 @@ import {
   BiLogoTailwindCss,
   BiLogoTypescript,
   BiLogoReact,
+  BiLogoNodejs,
+  BiLogoPostgresql,
+  BiLogoHtml5,
+  BiLogoCss3,
+  BiLogoBootstrap,
 } from "react-icons/bi";
+
+import { TbBrandVite, TbBrandNextjs, TbBrandPrisma } from "react-icons/tb";
 
 import { type IconType } from "react-icons";
 
@@ -28,10 +37,19 @@ const icons: Icons = {
   BiLogoReact,
   BiLogoTailwindCss,
   BiLogoTypescript,
+  BiLogoNodejs,
+  BiLogoPostgresql,
+  BiLogoHtml5,
+  BiLogoCss3,
+  BiLogoBootstrap,
+  TbBrandVite,
+  TbBrandNextjs,
+  TbBrandPrisma,
   // Add more icons as needed
 };
 
 import projects from "../projects_data/Projects";
+import futureProject from "@/projects_data/FutureProject";
 ---
 
 <MainLayout title="Manoel Lopes | Developer - QA">
@@ -45,7 +63,7 @@ import projects from "../projects_data/Projects";
       </h1>
 
       <p
-        class="font-courier max-w-[700px] ml-14 text-justify leading-7 mt-10 indent-8 tracking-wide text-zinc-50"
+        class="font-courier max-w-[700px] ml-14 text-justify leading-7 mt-10 indent-10 tracking-wide text-zinc-300"
       >
         I'm a Full Stack Software Engineer, with proficiency in backend
         technologies like Node.js and Python, as well as frontend tools like
@@ -89,6 +107,7 @@ import projects from "../projects_data/Projects";
               <CardHeader className="text-2xl font-ocra uppercase text-purple-600">
                 <CardTitle>{project.name}</CardTitle>
               </CardHeader>
+
               <CardDescription className="text-justify font-courier indent-4 text-md ">
                 {project.description}
               </CardDescription>
@@ -101,13 +120,15 @@ import projects from "../projects_data/Projects";
                     const IconComponent = icons[tech.icon];
                     return (
                       <a title={tech.name} data-tooltip-placement="bottom">
-                        <IconComponent size="48px" className="text-zinc-50" />
+                        <IconComponent
+                          size="48px"
+                          className="text-zinc-500 hover:text-zinc-300 transition-colors duration-300"
+                        />
                       </a>
                     );
                   })}
                 </div>
               </CardContent>
-
               <CardFooter className="flex flex-row gap-4 overflow-hidden whitespace-nowrap mt-5">
                 {project.urls.map((url) => {
                   return (
@@ -127,4 +148,68 @@ import projects from "../projects_data/Projects";
       }
     </div>
   </section>
+
+  <!-- Working on progress section -->
+  <section class="mt-10">
+    <h1 class="font-ocra text-2xl text-blue-500">
+      <span class="text-zinc-50">{"<"}</span>Working On<span
+        class="text-zinc-50">{" />"}</span
+      >
+    </h1>
+
+    <div class="flex mx-auto max-w-[600px] mt-10">
+      {
+        futureProject.map((project) => {
+          return (
+            <Card className="border-2 border-cyan-400 px-4 py-2 flex flex-col items-center rounded-md">
+              <CardHeader className="text-2xl font-ocra uppercase text-purple-600">
+                <CardTitle>{project.name}</CardTitle>
+              </CardHeader>
+
+              <CardDescription className="text-justify font-courier indent-4 text-md ">
+                {project.description}
+              </CardDescription>
+              <CardContent className="flex flex-col items-center mt-2">
+                <h2 class="text-sm font-ocra uppercase text-orange-500">
+                  Tech Stack
+                </h2>
+                <div class="flex flex-row mt-4 gap-4">
+                  {project.stack.map((tech) => {
+                    const IconComponent = icons[tech.icon];
+                    return (
+                      <a title={tech.name} data-tooltip-placement="bottom">
+                        <IconComponent
+                          size="48px"
+                          className="text-zinc-500 hover:text-zinc-300 transition-colors duration-300"
+                        />
+                      </a>
+                    );
+                  })}
+                </div>
+              </CardContent>
+              <CardFooter className="flex flex-row gap-4 overflow-hidden whitespace-nowrap mt-5">
+                {project.urls.map((url) => {
+                  return (
+                    <a
+                      href={url.url}
+                      target="_blank"
+                      class="text-zinc-50 uppercase rounded-md border-2 text-sm border-green-700 p-2 w-full justify-center items-center hover:bg-green-700 transition-colors duration-300 font-ocra flex gap-2"
+                    >
+                      {url.type}
+                    </a>
+                  );
+                })}
+              </CardFooter>
+            </Card>
+          );
+        })
+      }
+    </div>
+  </section>
+
+  <!-- Footer goes here -->
+  <div class="mx-auto flex mt-10 items-center justify-center">
+    <h1 class="font-ocra text-4xl text-red-800">Game Over</h1>
+  </div>
+  <Footer />
 </MainLayout>
