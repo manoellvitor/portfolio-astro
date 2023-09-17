@@ -78,7 +78,7 @@
 
 body {
   -webkit-font-smoothing: antialiased;
-  @apply text-zinc-50 bg-zinc-950;
+  @apply bg-zinc-950 font-courier text-zinc-300;
 }
 
 @layer base {

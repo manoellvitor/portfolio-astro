@@ -3,16 +3,18 @@ import { Image } from "astro:assets";
 import ManoelLopesAvatar from "@/images/manoel_lopes.jpg";
 ---
 
-<section class="flex flex-row mt-10 justify-between items-center">
-  <div>
+<section
+  class="flex flex-col lg:flex-row justify-between mt-10 gap-6 md:gap-2 items-center"
+>
+  <div class="flex flex-col gap-4 items-center md:items-start">
     <h1 class="font-ocra text-2xl text-green-700">
-      <span class="text-zinc-50">{"<"}</span>About Manoel<span
-        class="text-zinc-50">{" />"}</span
+      <span class="text-zinc-300">{"<"}</span>About Manoel<span
+        class="text-zinc-300">{" />"}</span
       >
     </h1>
 
     <p
-      class="font-courier max-w-[700px] ml-14 text-justify leading-7 mt-10 indent-10 tracking-wide text-zinc-300"
+      class="max-w-[700px] text-justify leading-7 indent-10 tracking-wide lg:ml-10"
     >
       I'm a Full Stack Software Engineer, with proficiency in backend
       technologies like Node.js and Python, as well as frontend tools like
@@ -27,7 +29,7 @@ import ManoelLopesAvatar from "@/images/manoel_lopes.jpg";
     </p>
   </div>
   <div
-    class="flex flex-col items-center justify-center rounded-full h-80 w-80 shadow-xl shadow-cyan-500/50"
+    class="flex flex-col items-center mt-2 justify-center rounded-full h-80 w-80 shadow-xl shadow-cyan-500/50"
   >
     <Image
       src={ManoelLopesAvatar}

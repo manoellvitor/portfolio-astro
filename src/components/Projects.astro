@@ -13,22 +13,26 @@ import {
 import { Icon } from "astro-icon";
 ---
 
-<section class="mt-10">
-  <h1 class="font-ocra text-2xl text-yellow-400">
-    <span class="text-zinc-50">{"<"}</span>Projects<span class="text-zinc-50"
-      >{" />"}</span
-    >
-  </h1>
-  <div class="grid grid-cols-3 gap-3 mt-10">
+<section
+  class="flex flex-col md:items-start justify-evenly mt-10 gap-6 md:gap-2 items-center"
+>
+  <div class="flex flex-col gap-4 items-center">
+    <h1 class="font-ocra text-2xl text-yellow-400">
+      <span class="text-zinc-300">{"<"}</span>Projects<span
+        class="text-zinc-300">{" />"}</span
+      >
+    </h1>
+  </div>
+
+  <div class="grid lg:grid-flow-col md:grid-row-2 w-full gap-3 mt-2">
     {
       projects.map((project) => {
         return (
-          <Card className="border-2 border-cyan-400 px-4 py-2 flex flex-col items-center rounded-md">
+          <Card className="border-2 border-cyan-400 px-4 py-2 flex flex-col items-center rounded-md min-w-[33%]">
             <CardHeader className="text-2xl font-ocra uppercase text-purple-600">
               <CardTitle>{project.name}</CardTitle>
             </CardHeader>
-
-            <CardDescription className="text-justify font-courier indent-4 text-md ">
+            <CardDescription className="text-justify font-courier indent-4 text-md">
               {project.description}
             </CardDescription>
             <CardContent className="flex flex-col items-center mt-2">
@@ -40,22 +44,21 @@ import { Icon } from "astro-icon";
                   return (
                     <a title={tech.name} data-tooltip-placement="bottom">
                       <Icon
-                        size="48px"
                         name={tech.icon}
-                        className="text-zinc-500 hover:text-zinc-300 transition-colors duration-500"
+                        className="text-zinc-500 hover:text-zinc-300 transition-colors duration-500 w-10"
                       />
                     </a>
                   );
                 })}
               </div>
             </CardContent>
-            <CardFooter className="flex flex-row gap-4 overflow-hidden whitespace-nowrap mt-5">
+            <CardFooter className="flex flex-col md:flex-row gap-4 overflow-hidden whitespace-nowrap mt-5">
               {project.urls.map((url) => {
                 return (
                   <a
                     href={url.url}
                     target="_blank"
-                    class="text-zinc-50 uppercase rounded-md border-2 text-sm border-green-700 p-2 w-full justify-center items-center hover:bg-green-700 transition-colors duration-300 font-ocra flex gap-2"
+                    class="text-zinc-300 uppercase rounded-md border-2 text-sm border-green-700 p-2 w-full justify-center items-center hover:bg-green-700 transition-colors duration-300 font-ocra flex gap-2"
                   >
                     {url.type}
                   </a>
