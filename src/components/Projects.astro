@@ -42,12 +42,12 @@ import { Icon } from "astro-icon";
               <div class="flex flex-row mt-4 gap-4">
                 {project.stack.map((tech) => {
                   return (
-                    <a title={tech.name} data-tooltip-placement="bottom">
+                    <div title={tech.name} data-tooltip-placement="bottom">
                       <Icon
                         name={tech.icon}
                         className="text-zinc-500 hover:text-zinc-300 transition-colors duration-500 w-10"
                       />
-                    </a>
+                    </div>
                   );
                 })}
               </div>
