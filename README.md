@@ -1,5 +1,5 @@
 # My Personal website
 
-```js
-Check it out 🖥️: manoellopes.dev
+```html
+Check it out 🖥️: https://manoellopes.dev
 ```
