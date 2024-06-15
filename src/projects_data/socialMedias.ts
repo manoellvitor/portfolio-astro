@@ -13,7 +13,7 @@ const socialMedias = [
         ariaLabel: "Check more on Manoel`s Linkedin page."
     },{
         name: "Resume CV",
-        url: "https://drive.google.com/uc?export=download&id=1GsJLYc1hv1LcfAEaU-MsFMCLJE941LRN",
+        url: "../../Manoel Lopes - Resume.pdf",
         icon: "mdi:file-pdf-box",
         color: "blue",
         ariaLabel: "Download Manoel`s Resume."
