@@ -15,7 +15,7 @@ const socialMedias = [
   },
   {
     name: "Resume CV",
-    url: "manoel-lopes-cv.pdf",
+    url: "../manoel-lopes-cv.pdf",
     icon: "mdi:file-pdf-box",
     color: "blue",
     ariaLabel: "Download Manoel`s Resume.",
